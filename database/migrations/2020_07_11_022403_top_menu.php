@@ -14,7 +14,7 @@ class TopMenu extends Migration
     public function up()
     {
         Schema::create('top_menu', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('top_menu_id');
             $table->string('title');
             $table->string('url')->nullable();
             $table->unsignedBigInteger('drop_id')->nullable();

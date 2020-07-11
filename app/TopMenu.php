@@ -9,8 +9,6 @@ class TopMenu extends Model
 
     protected $table = 'top_menu';
 
-    protected $primaryKey = 'id';
-
     public function tittle()
     {
         return $this->hasMany(TopMenu::class);

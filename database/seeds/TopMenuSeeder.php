@@ -67,7 +67,7 @@ class TopMenuSeeder extends Seeder
     {
         foreach ($this->top_menu as $menu) {
             DB::table('top_menu')->insert([
-                'id' => $menu['id'],
+                'top_menu_id' => $menu['id'],
                 'title' => $menu['title'],
                 'url'=> $menu['url'],
                 'drop_id' => $menu['drop_id']
