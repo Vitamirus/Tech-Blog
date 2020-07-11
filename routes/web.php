@@ -26,4 +26,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //Профили
 
-Route::get('/user/{id}', 'ProfileController@getProfile')->name('profile.index');
+Route::get('/user/{id}', 'ProfileController@getProfile')->name('profile.user-profile');
