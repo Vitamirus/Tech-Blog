@@ -79,7 +79,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">{{ __('Dashboard') }}</div>
+                    <div class="card-header">{{ __('Ага класс, а Vue.js не работает!!!') }}</div>
 
                     <div class="card-body">
                         @if (session('status'))
@@ -88,15 +88,14 @@
                             </div>
                         @endif
 
-                        {{ __('You are logged in!') }}
+                        {{ __('Вход выполнен') }}
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    @yield('content')
-    <h1>This is a vue component</h1>
+
 </div>
-    <script src="{{ asset('/js/vue-app.js') }}"></script>
+
 </body>
 </html>

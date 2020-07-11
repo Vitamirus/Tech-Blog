@@ -21,11 +21,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->where('vue', '[\/\w\.-]*');
+Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/home/{vue_capture?}', function () {
-    return view('test');
-})->where('vue_capture', '[\/\w\.-]*');
 
 //Профили
 
