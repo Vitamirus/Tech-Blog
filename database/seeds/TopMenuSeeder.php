@@ -73,6 +73,5 @@ class TopMenuSeeder extends Seeder
                 'drop_id' => $menu['drop_id']
             ]);
         }
-
     }
 }

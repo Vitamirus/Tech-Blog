@@ -23,6 +23,7 @@ class TopMenu extends Migration
         });
     }
 
+
     /**
      * Reverse the migrations.
      *
