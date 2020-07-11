@@ -79,11 +79,7 @@
                 </div>
             @endif
 
-            <h1>This is a vue component</h1>
-            <div id="app">
-                <router-view></router-view>
-            </div>
-            <script src="{{ asset('/js/vue-app.js') }}"></script>
+
 
             <div class="content">
                 <div class="title m-b-md">

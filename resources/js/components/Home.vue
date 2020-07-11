@@ -1,7 +1,7 @@
 <template>
     <div>
         @{{ message }}
-        <router-link to="/vue/example"><a>url to example</a></router-link>
+        <router-link to="/home/example"><a>url to example</a></router-link>
     </div>
 
 </template>

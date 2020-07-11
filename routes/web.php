@@ -17,10 +17,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/vue/{vue_capture?}', function () {
-    return view('welcome');
-})->where('vue_capture', '[\/\w\.-]*');
+
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->where('vue', '[\/\w\.-]*');
+
+Route::get('/home/{vue_capture?}', function () {
+    return view('test');
+})->where('vue_capture', '[\/\w\.-]*');
+
+//Профили
+
+Route::get('/user/{id}', 'ProfileController@getProfile')->name('profile.index');
