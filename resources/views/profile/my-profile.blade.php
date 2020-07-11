@@ -4,7 +4,7 @@
     @include('templates.menu')
     <div class="row">
         <div class="col-md-6">
-            {{ $user->firstname  }}
+            {{ Auth::user()->firstname }} {{ Auth::user()->lastname }}
         </div>
     </div>
 
