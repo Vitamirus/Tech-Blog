@@ -73,8 +73,8 @@ class RegisterController extends Controller
         ]);
 
         $user = User::where('email', $data['email'])->first();
-        $user->nichname = 'id'.$user->id;
-        echo $user->id;
+        $user->nickname = 'id'.$user->id;
+        $user->update();
 
         return $user;
 

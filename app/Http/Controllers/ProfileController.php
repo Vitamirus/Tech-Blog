@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 
 class ProfileController extends Controller
 {
-   public function getProfile($id){
+   public function getProfile($nickname){
 
-       $user = User::where('id', $id)->first();
+       $user = User::where('nickname', $nickname)->first();
 
        if (!$user) {
            abort(404);

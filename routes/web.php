@@ -29,4 +29,4 @@ Route::post('/settings', 'UserConfigController@update')->name('settings');
 
 //Профили
 
-Route::get('/user/{id}', 'ProfileController@getProfile')->name('profile.user-profile');
+Route::get('/user/{nickname}', 'ProfileController@getProfile')->name('profile.user-profile');
