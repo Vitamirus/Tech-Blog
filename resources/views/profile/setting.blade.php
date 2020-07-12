@@ -4,14 +4,20 @@
     @include('templates.menu')
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-5">
 
                 <form method="POST" action="{{ route('settings') }}">
                     @csrf
-
+                    <div class="row">
+                        <div class="offset-md-1 mt-4">
+                            <h3 class="text-h3">Личные данные</h3>
+                        </div>
+                    </div>
+                    <hr style="margin: 4px">
                     <div class="row">
 
                         <div class="offset-md-1 col-md-5">
+
                             <div class="form-group">
                                 <input id="id" name="id" value="{{ Auth::user()->id }}" type="hidden">
 
