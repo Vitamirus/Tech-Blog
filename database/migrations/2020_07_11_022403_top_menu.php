@@ -18,7 +18,7 @@ class TopMenu extends Migration
             $table->string('title');
             $table->string('url')->nullable();
             $table->unsignedBigInteger('drop_id')->nullable();
-            $table->foreign('drop_id')->references('id')->on('top_menu');
+            $table->foreign('drop_id')->references('top_menu_id')->on('top_menu');
             $table->timestamps();
         });
     }

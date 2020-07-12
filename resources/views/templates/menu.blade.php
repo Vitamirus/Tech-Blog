@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-    <div class="container">
+    <div class="container-fluid">
         <a class="navbar-brand" href="{{ url('/') }}">
             <img src="{{ asset('img/logo/logo.png') }}" alt="">
             {{--                    {{ config('app.name', 'Актикум') }}--}}
@@ -29,9 +29,9 @@
                 @else
                     <ul>
 
-                        {{$categories}}
+{{--                        {{$categories}}--}}
 {{--                        @foreach ($categories as $category)--}}
-{{--                            <li>{{ $category->name }}</li>--}}
+{{--                           <li>{{ $category->top_menu_id }}</li>--}}
 {{--                            <ul>--}}
 {{--                                @foreach ($category->childrenCategories as $childCategory)--}}
 {{--                                    @include('child_category', ['child_category' => $childCategory])--}}
@@ -44,12 +44,24 @@
                             {{ Auth::user()->firstname }} {{ Auth::user()->lastname }}<span class="caret"></span>
                         </a>
 
+
+
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item " href="/settings">
+                                Настройки
+                            </a>
+
+                            <a class="dropdown-item " href="/settings">
+                                Помощь
+                            </a>
+
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
+                                {{ __('Выход') }}
                             </a>
+
+
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 @csrf

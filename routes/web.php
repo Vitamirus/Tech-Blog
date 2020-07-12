@@ -23,6 +23,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/settings', 'UserConfigController@index')->name('settings');
+
+Route::post('/settings', 'UserConfigController@update')->name('settings');
 
 //Профили
 

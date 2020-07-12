@@ -25,11 +25,11 @@ class TopMenuProvider extends ServiceProvider
     public function boot()
     {
 
-
-        view()->share('categories', TopMenu::whereNull('drop_id')
-            ->with('childrenTittle')
-            ->get()
-        );
+//        $categories = TopMenu::whereNull('drop_id')
+//            ->with('childrenTittle')
+//            ->get();
+//
+//        view()->share('categories', $categories);
 
     }
 }
