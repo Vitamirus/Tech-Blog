@@ -17,7 +17,13 @@
 
                                 <label for="firstname" class="col-form-label text-md-right">{{ __('Имя') }}</label>
 
-                                <input id="firstname"  type="text" class="form-control" name="firstname" value="{{ old('firstname') }}{{ Auth::user()->firstname }}">
+                                <input id="firstname"  type="text" class="form-control @error('firstname') is-invalid @enderror" name="firstname" value="{{ old('firstname')}}{{ Auth::user()->firstname }}">
+
+                                @error('firstname')
+                                    <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
 
                         </div>
@@ -25,10 +31,30 @@
                             <div class="form-group">
                                 <label for="lastname" class="col-form-label text-md-right">{{ __('Фамилия') }}</label>
 
-                                <input id="lastname" type="text" class="form-control " name="lastname" value="{{ old('lastname') }}{{ Auth::user()->lastname }}">
+                                <input id="lastname" type="text" class="form-control @error('lastname') is-invalid @enderror" name="lastname" value="{{ old('lastname')}}{{Auth::user()->lastname }}">
 
+                                @error('lastname')
+                                    <span class="invalid-feedback" role="alert">
+                                           <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
+                        </div>
 
+                        <div class="offset-md-1 col-md-5">
+                            <div class="form-group">
+                                <input id="id" name="id" value="{{ Auth::user()->id }}" type="hidden">
+
+                                <label for="nickname" class="col-form-label text-md-right">{{ __('Ник') }}</label>
+
+                                <input id="nickname"  type="text" class="form-control @error('nickname') is-invalid @enderror" name="nickname" value="{{ old('nickname')}}id{{ Auth::user()->id }}">
+
+                                @error('nickname')
+                                <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
                         </div>
 
                         <div class="col-md-5 offset-md-2 mt-3">
@@ -41,6 +67,7 @@
                     </div>
 
                 </form>
+
             </div>
         </div>
     </div>
