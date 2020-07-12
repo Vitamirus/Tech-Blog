@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Artisan;
 use function GuzzleHttp\Psr7\str;
 
 class UserConfigController extends Controller
@@ -23,11 +24,14 @@ class UserConfigController extends Controller
 
         $user = User::where('id', $request->input('id'))->first();
 
-        $user->firstname = $request->input('firstname');
-        $user->lastname = $request->input('lastname');
+        $request->input('firstname') ? $user->firstname = $request->input('firstname'): null;
+        $request->input('lastname') ? $user->lastname = $request->input('lastname'): null;
+        $request->input('nickname') ? $user->nickname = $request->input('nickname'): null;
 
-        $user->save();
+        $user->update();
 
-        return view('profile.setting', compact('user'));
+        Artisan::call('view:clear');
+
+        return view('profile.setting');
     }
 }

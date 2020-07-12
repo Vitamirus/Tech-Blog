@@ -47,7 +47,7 @@
 
                                 <label for="nickname" class="col-form-label text-md-right">{{ __('Ник') }}</label>
 
-                                <input id="nickname"  type="text" class="form-control @error('nickname') is-invalid @enderror" name="nickname" value="{{ old('nickname')}}id{{ Auth::user()->id }}">
+                                <input id="nickname"  type="text" class="form-control @error('nickname') is-invalid @enderror" name="nickname" value="{{ old('nickname')}}{{ Auth::user()->nickname }}">
 
                                 @error('nickname')
                                 <span class="invalid-feedback" role="alert">
