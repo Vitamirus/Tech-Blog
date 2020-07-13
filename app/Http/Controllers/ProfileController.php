@@ -12,7 +12,6 @@ class ProfileController extends Controller
 
 
        $user = User::where('nickname', $nickname)->first();
-       $user = User::where('nickname', $nickname)->first();
 
 
 
