@@ -47,6 +47,10 @@
 
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item " href="/user/{{Auth::user()->nickname}}">
+                                Мой профиль
+                            </a>
+
                             <a class="dropdown-item " href="/settings">
                                 Настройки
                             </a>
