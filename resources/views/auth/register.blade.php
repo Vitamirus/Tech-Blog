@@ -11,7 +11,6 @@
                 <div class="">
                     <div class="col-md-8 offset-md-2 mt-5">
 
-
                     </div>
                     <nav>
                         <div class="nav nav-tabs" id="nav-tab" role="tablist">

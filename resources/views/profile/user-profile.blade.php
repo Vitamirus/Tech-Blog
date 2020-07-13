@@ -1,29 +1,30 @@
+
 @extends('layouts.app')
 
 @section('content')
     @include('templates.menu')
-{{--    <div class="row">--}}
-{{--        <div class="col-md-6">--}}
-{{--            {{ $user->firstname  }} {{ $user->lastname  }}--}}
-{{--        </div>--}}
-{{--    </div>--}}
+    {{--    <div class="row">--}}
+    {{--        <div class="col-md-6">--}}
+    {{--            {{ $user->firstname  }} {{ $user->lastname  }}--}}
+    {{--        </div>--}}
+    {{--    </div>--}}
     <div class="imageback">
-        <img class="ava"  src="img/avatar.png" alt="">
+        <img class="ava"  src={{ asset('img/avatar.png') }} alt="">
     </div>
     <div class="container">
-    @if($user->isOnline())
-        <span class="color-green font-size-12"><i class="demo-icon icon-circle"></i>
+        @if($user->isOnline())
+            <span class="color-green font-size-12"><i class="demo-icon icon-circle"></i>
                             online</span>
-    @else
-        <span class="color-red font-size-12"><i class="demo-icon icon-circle-empty"></i>
+        @else
+            <span class="color-red font-size-12"><i class="demo-icon icon-circle-empty"></i>
                             offline</span>
-    @endif
+        @endif
     </div>
     <div class="row">
         <div class="col-md-9 blog-main">
             <div class="blog-post">
                 <div class="d-flex justify-content-end">
-                    <h2 class="name blog-post-title">{{ $user->firstname  }} {{ $user->lastname  }} ({{'@'.Auth::user()->nickname}})<img class="accept"  src="img/accept.png" alt=""></h2>
+                    <h2 class="name blog-post-title">{{ $user->firstname  }} {{ $user->lastname  }} ({{'@'.$user->nickname}})<img class="accept"  src="img/accept.png" alt=""></h2>
 
                     <p class="info-profyl"> Россия, г.Смоленск, 21 год</p>
                 </div>
@@ -38,7 +39,7 @@
                                     </div>
                                     <div class="page_status_input" id="currinfo_input" contenteditable="true" role="textbox">M83 – Don't Save Us From the Flames</div>
                                 </div>
-                               <button class="flat_button button_small page_status_btn_save" id="currinfo_save">Сохранить</button>
+                                <button class="flat_button button_small page_status_btn_save" id="currinfo_save">Сохранить</button>
                             </div>
                         </div>
                         <div id="currinfo_wrap" onclick="return Page.infoEdit();" tabindex="0" role="button" style="display: block;">
@@ -57,38 +58,38 @@
                 </div>
                 <br>
                 <div class="nav_down row col-md-12 justify-content-end">
-                <div class="col-md-2">
-                    <div class="col-md-1">
-                        <p>Статьи</p>
-                    </div>
-                    <div class="col-md-1">
+                    <div class="col-md-2">
+                        <div class="col-md-1">
+                            <p>Статьи</p>
+                        </div>
+                        <div class="col-md-1">
 
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-2">
-                    <div class="col-md-1">
-                        <p>Читатели</p>
-                    </div>
-                    <div class="col-md-1">
+                    <div class="col-md-2">
+                        <div class="col-md-1">
+                            <p>Читатели</p>
+                        </div>
+                        <div class="col-md-1">
 
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-2">
-                    <div class="col-md-1">
-                        <p>Подписки</p>
-                    </div>
-                    <div class="col-md-1">
+                    <div class="col-md-2">
+                        <div class="col-md-1">
+                            <p>Подписки</p>
+                        </div>
+                        <div class="col-md-1">
 
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-2">
-                    <div class="col-md-1">
-                        <p>Библиотека</p>
-                    </div>
-                    <div class="col-md-1">
+                    <div class="col-md-2">
+                        <div class="col-md-1">
+                            <p>Библиотека</p>
+                        </div>
+                        <div class="col-md-1">
 
+                        </div>
                     </div>
-                </div>
                 </div>
 
             </div><!-- /.blog-post -->

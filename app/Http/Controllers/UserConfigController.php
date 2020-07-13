@@ -38,6 +38,7 @@ class UserConfigController extends Controller
         $request->input('firstname') ? $user->firstname = $request->input('firstname'): null;
         $request->input('lastname') ? $user->lastname = $request->input('lastname'): null;
         $request->input('nickname') ? $user->nickname = mb_strtolower($request->input('nickname')): null;
+        $request->input('date') ? $user->date = $request->input('date'): null;
 
         $user->update();
 

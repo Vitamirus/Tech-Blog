@@ -46,7 +46,14 @@
 .panel{
     margin-left: 30px;
 }
-.nav_down {
 
 
+label {
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input,
+label {
+    margin: .4rem 0;
 }
