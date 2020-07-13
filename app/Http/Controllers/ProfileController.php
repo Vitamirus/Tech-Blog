@@ -10,15 +10,21 @@ class ProfileController extends Controller
 {
    public function getProfile($nickname){
 
-
        $user = User::where('nickname', $nickname)->first();
-
-
-
        if (!$user) {
            abort(404);
        }
 
-       return view('profile.user-profile', compact('user'));
+       if ($nickname == Auth::user()->nickname){
+           return view('profile.my-profile', compact('user'));
+       }
+       else {
+           return view('profile.user-profile', compact('user'));
+       }
+
+
+
+
+
    }
 }
