@@ -8,7 +8,12 @@ use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller
 {
-   public function getProfile($nickname){
+    public function __construct(){
+
+        $this->middleware('auth');
+    }
+
+    public function getProfile($nickname){
 
        $user = User::where('nickname', $nickname)->first();
        if (!$user) {
