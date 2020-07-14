@@ -120,6 +120,9 @@
                     </div>
                 </div>
             </div>
-            @include('profile.article')
+
+            @foreach($user->article as $article)
+                @include('profile.article')
+            @endforeach
         </div><!-- /.blog-main -->
 @endsection

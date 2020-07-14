@@ -21,7 +21,7 @@ class ArticleController extends Controller
         $f = $request->file('image');
 
         $f->move(storage_path('images'), time().'_'.$f->getClientOriginalName());
-        $contact->image = storage_path('images').time().'_'.$f->getClientOriginalName();
+        $contact->image = 'storage/images/'.time().'_'.$f->getClientOriginalName();
 
 
         $contact->text = $request->input('text');
@@ -32,3 +32,4 @@ class ArticleController extends Controller
         return redirect()->route('home');
     }
 }
+//создать новую функцию удаления туть БЛЯТЬ в которую отправить из формы какую то штуку с кнопки удалить в скобочках ($id)

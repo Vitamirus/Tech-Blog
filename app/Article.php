@@ -12,7 +12,7 @@ class Article extends Model
 
     public function tittle()
     {
-        return $this->hasMany(User::class);
+        return $this->belongsTo(User::class);
     }
 
     protected $fillable = [

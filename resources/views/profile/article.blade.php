@@ -7,15 +7,17 @@
             <img class="profile-img" src={{ asset('img/avatar.png') }} alt="">
 
         </div>
+        {{--                                <input id="id" name="id" value="{{ $article->id }}" type="hidden">--}}
         <div class="col-9">
             <div class="">
                 <div class="row">
-                    <h1>Заголовок</h1>
+                    {{ $article->article_id }}
+
                 </div>
             </div>
-            <div class="">
+            <div>
                 <div class="row">
-                    <img class="img-article" src={{ asset('img/Rectangle.png') }} alt="">
+                    <img class="img-article" src={{ asset ($article->image) }} alt="">
                 </div>
             </div>
             <div class="">

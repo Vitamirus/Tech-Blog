@@ -21,6 +21,7 @@
                             <div class="form-group">
                                 <input id="id" name="id" value="{{ Auth::user()->id }}" type="hidden">
 
+
                                 <label for="firstname" class="col-form-label text-md-left">{{ __('Имя') }}</label>
 
                                 <input id="firstname"  type="text" class="form-control @error('firstname') is-invalid @enderror" name="firstname" value="{{ old('firstname')}}{{ Auth::user()->firstname }}">

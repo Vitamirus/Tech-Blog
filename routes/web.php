@@ -34,3 +34,7 @@ Route::post('/settings', 'UserConfigController@update')->name('settings');
 Route::get('/{nickname}', 'ProfileController@getProfile')->name('profile.user-profile');
 
 Route::post('/article', 'ArticleController@addArticle')->name('article');
+
+//Route::get('/article/{id}', 'ArticleController@deleteArticle')->name('delete_article');
+//
+//Route::post('/delete_article', 'ArticleController@deleteArticle')->name('delete_article');
