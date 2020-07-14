@@ -20,14 +20,18 @@ class UserConfigController extends Controller
         return view('profile.setting');
     }
 
-    protected function validator(Request $request)
+    protected function store(Request $request)
     {
-        return Validator::make($request, [
+        $validatedData = $request->validate([
             'firstname' => ['required', 'string', 'max:255'],
             'lastname' => ['required', 'string', 'max:255'],
             'nickname' => ['required', 'string', 'email', 'max:255', 'unique:username'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
+
+        \App\User::create($validatedData);
+
+        return response()->json('Form is successfully validated and data has been saved');
     }
 
     public function update(Request $request){

@@ -23,7 +23,7 @@ Auth::routes();
 
 Route::get('/home', function () {
     return redirect('/'.Auth::user()->nickname);
-});
+})->name('home');
 
 Route::get('/settings', 'UserConfigController@index')->name('settings');
 
@@ -32,3 +32,5 @@ Route::post('/settings', 'UserConfigController@update')->name('settings');
 //Профили
 
 Route::get('/{nickname}', 'ProfileController@getProfile')->name('profile.user-profile');
+
+Route::post('/article', 'ArticleController@addArticle')->name('article');

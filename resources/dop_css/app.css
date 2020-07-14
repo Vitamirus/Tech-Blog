@@ -21,14 +21,15 @@
     height: 25px;
 }
 .imageback{
-    background-position: center, 100px;
+    height: 352px;
+    background-position: center, 300px;
     background-image: url("../img/Rectangle.png");
 }
 .ava{
     width: 256px;
     height: 256px;
     margin-top: 200px;
-    margin-left: 70px;
+    margin-left: 190px;
 }
 .name{
     right: auto;
@@ -56,4 +57,16 @@ label {
 input,
 label {
     margin: .4rem 0;
+}
+.registr{
+    box-shadow: 0 6px 4px -4px rgba(0, 0, 0, .2);
+}
+.profile-img {
+    width: 60px;
+    height: 60px;
+    margin-left: 40%;
+}
+.img-article{
+    width: 80%;
+    height: 200px;
 }
