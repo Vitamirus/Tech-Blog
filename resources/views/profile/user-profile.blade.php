@@ -100,6 +100,8 @@
                 <a class="btn btn-outline-primary" href="#">Older</a>
                 <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">Newer</a>
             </nav>
-
+            @foreach($user->article as $article)
+                @include('profile.article')
+            @endforeach
         </div><!-- /.blog-main -->
 @endsection

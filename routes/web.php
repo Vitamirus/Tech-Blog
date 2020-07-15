@@ -35,6 +35,7 @@ Route::get('/{nickname}', 'ProfileController@getProfile')->name('profile.user-pr
 
 Route::post('/article', 'ArticleController@addArticle')->name('article');
 
-//Route::get('/article/{id}', 'ArticleController@deleteArticle')->name('delete_article');
 //
-//Route::post('/delete_article', 'ArticleController@deleteArticle')->name('delete_article');
+Route::post('/delete_article', 'ArticleController@deleteArticle')->name('delete_article');
+
+Route::post('/status', 'UserConfigController@update')->name('status');

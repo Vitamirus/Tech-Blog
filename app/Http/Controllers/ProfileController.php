@@ -18,11 +18,12 @@ class ProfileController extends Controller
     public function getProfile($nickname){
 
        $user = User::where('nickname', $nickname)->first();
+//       $user = Article::where('article_id', $nickname)->first();
        if (!$user) {
            abort(404);
        }
 
-       echo $user->article;
+
        if ($nickname == Auth::user()->nickname){
            return view('profile.my-profile', compact('user'));
        }
@@ -30,4 +31,5 @@ class ProfileController extends Controller
            return view('profile.user-profile', compact('user'));
        }
    }
+
 }

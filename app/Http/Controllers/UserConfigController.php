@@ -43,11 +43,12 @@ class UserConfigController extends Controller
         $request->input('lastname') ? $user->lastname = $request->input('lastname'): null;
         $request->input('nickname') ? $user->nickname = mb_strtolower($request->input('nickname')): null;
         $request->input('date') ? $user->date = $request->input('date'): null;
+        $request->input('status') ? $user->status = $request->input('status'): null;
 
         $user->update();
 
         Artisan::call('view:clear');
 
-        return view('profile.setting');
+        return redirect()->route('home');
     }
 }

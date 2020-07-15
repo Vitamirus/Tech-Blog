@@ -26,10 +26,10 @@
     background-image: url("../img/Rectangle.png");
 }
 .ava{
-    width: 256px;
-    height: 256px;
-    margin-top: 200px;
-    margin-left: 190px;
+    width: 180px;
+    height: 180px;
+    margin-top: 250px;
+    margin-left: 150px;
 }
 .name{
     right: auto;
@@ -69,4 +69,7 @@ label {
 .img-article{
     width: 80%;
     height: 200px;
+}
+.status{
+    width: 50%;
 }
