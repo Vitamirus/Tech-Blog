@@ -17,7 +17,6 @@
                     <div class="d-flex justify-content-end">
                         <h2 class="name blog-post-title">{{ $user->firstname  }} {{ $user->lastname  }} ({{'@'.Auth::user()->nickname}})<img class="accept"  src="img/accept.png" alt=""></h2>
 
-
                         @if($user->isOnline())
                             <span class="color-green font-size-12"><i class="demo-icon icon-circle"></i>
 

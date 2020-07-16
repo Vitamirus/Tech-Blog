@@ -39,16 +39,16 @@
 {{--                            </ul>--}}
 {{--                        @endforeach--}}
                     </ul>
+                    <li class="nav-item">
+                        <a id="navbarDropdown" class="nav-link" href="{{route('chat-menu')}}"  aria-haspopup="true" aria-expanded="false" v-pre>
+                            Чаты</a>
+                    </li>
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->firstname }} {{ Auth::user()->lastname }} ({{'@'.Auth::user()->nickname}})<span class="caret"></span>
                         </a>
-
-
-
-
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item " href="/{{Auth::user()->nickname}}">
+                            <a class="dropdown-item " href="{{"/user/".Auth::user()->nickname}}">
                                 Мой профиль
                             </a>
 

@@ -68,7 +68,7 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/'.Auth::user()->nickname) }}">Home</a>
+                        <a href="{{ url('/user/'.Auth::user()->nickname) }}">Home</a>
                     @else
                         <a href="{{ route('login') }}">Вход</a>
 
@@ -98,5 +98,6 @@
                 </div>
             </div>
         </div>
+        @yield('content')
     </body>
 </html>

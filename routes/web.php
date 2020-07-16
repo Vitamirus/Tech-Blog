@@ -22,7 +22,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', function () {
-    return redirect('/'.Auth::user()->nickname);
+    return redirect('/user/'.Auth::user()->nickname);
 })->name('home');
 
 Route::get('/settings', 'UserConfigController@index')->name('settings');
@@ -31,7 +31,7 @@ Route::post('/settings', 'UserConfigController@update')->name('settings');
 
 //Профили
 
-Route::get('/{nickname}', 'ProfileController@getProfile')->name('profile.user-profile');
+Route::get('/user/{nickname}', 'ProfileController@getProfile')->name('profile.user-profile');
 
 Route::post('/article', 'ArticleController@addArticle')->name('article');
 
@@ -39,3 +39,8 @@ Route::post('/article', 'ArticleController@addArticle')->name('article');
 Route::post('/delete_article', 'ArticleController@deleteArticle')->name('delete_article');
 
 Route::post('/status', 'UserConfigController@update')->name('status');
+
+Route::get('/chat-menu', 'ChatController@index')->name('chat-menu');
+
+Route::get('/chat', 'ChatController@index_item')->name('chat');
+
