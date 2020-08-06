@@ -26,10 +26,26 @@
     background-image: url("../img/Rectangle.png");
 }
 .ava{
+    z-index: 1;
     width: 180px;
     height: 180px;
     margin-top: 250px;
     margin-left: 150px;
+    background-size: 180px;
+    border-radius: 100px;
+}
+.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+}
+.profile_block{
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+}
+.ava:hover{
+    z-index: 2;
+    background-image: url("../img/61776.png");!important;
 }
 .name{
     right: auto;
@@ -65,6 +81,8 @@ label {
     width: 60px;
     height: 60px;
     margin-left: 40%;
+    border-radius: 100px; !important;
+
 }
 .img-article{
     width: 80%;
@@ -181,21 +199,8 @@ h4.card-title {
     transition: background-color .2s linear
 }
 
-.media .avatar {
+.media {
     flex-shrink: 0
-}
-
-.avatar {
-    position: relative;
-    display: inline-block;
-    width: 36px;
-    height: 36px;
-    line-height: 36px;
-    text-align: center;
-    border-radius: 100%;
-    background-color: #f5f6f7;
-    color: #8b95a5;
-    text-transform: uppercase
 }
 
 .media-chat .media-body {
@@ -383,3 +388,7 @@ textarea {
     color: #48b0f7 !important
 }
 /*чат-конец*/
+.sett {
+    align-content: end;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25); !important;
+}

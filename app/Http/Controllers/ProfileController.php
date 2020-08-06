@@ -15,6 +15,8 @@ class ProfileController extends Controller
         $this->middleware('auth');
     }
 
+
+
     public function getProfile($nickname){
 
        $user = User::where('nickname', $nickname)->first();
@@ -31,5 +33,17 @@ class ProfileController extends Controller
            return view('profile.user-profile', compact('user'));
        }
    }
+    public function avatar(Request $request){
 
+        $user = User::where('nickname', Auth::user()->nickname)->first();
+
+
+        $avatar = $request->file('avatar');
+        $avatar->move('storage/images/', time().'_'.$avatar->getClientOriginalName());
+        $user->avatar = 'storage/images/'.time().'_'.$avatar->getClientOriginalName();
+
+        $user->update();
+
+        return redirect()->route('home');
+    }
 }

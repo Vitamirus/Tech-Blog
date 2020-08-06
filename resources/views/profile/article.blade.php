@@ -1,17 +1,15 @@
 
-{{--Короче смтори, здесь тебе надо сделать шаблон одной статьи который потом будет выводиться в цикле в шаблонах my-profile и user-profile--}}
-
-<div class="row justify-content-md-end">
+<div class="">
     <div class="row">
         <div class="col-3">
-            <img class="profile-img" src={{ asset('img/avatar.png') }} alt="">
+            <img class="profile-img" src={{ asset($user->avatar) }} alt="">
 
         </div>
         {{--                                <input id="id" name="id" value="{{ $article->id }}" type="hidden">--}}
         <div class="col-8">
             <div class="">
                 <div class="row">
-                    {{ $article->title }}
+                    <h5>{{ $article->title }}</h5>
                 </div>
             </div>
             <div>
@@ -21,7 +19,7 @@
             </div>
             <div class="">
                 <div class="row">
-                    <h4>Ыввпдьывплвьп выпьывпльывжл пьывждпьыв дльпывдь ывдпь ывдьапыдв ьываьп ыдльдпылвьап дыльва</h4>
+                    {{ $article->text }}
                 </div>
             </div>
         </div>

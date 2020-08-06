@@ -22,7 +22,11 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('nickname')->unique()->nullable();
             $table->string('image')->nullable();
+            $table->string('avatar')->default("storage/images/1596030789_avatar.png");
             $table->string('status')->nullable();
+            $table->string('gender')->nullable();
+            $table->string('country')->default("Россия");
+            $table->string('city')->default("Смоленск");
             $table->date('date')->nullable();
             $table->rememberToken();
             $table->timestamps();

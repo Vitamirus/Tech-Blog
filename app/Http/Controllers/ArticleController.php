@@ -20,6 +20,8 @@ class ArticleController extends Controller
 
         $contact = new Article();
         $contact->title = $request->input('title');
+
+
         $f = $request->file('image');
 
         $f->move('storage/images/', time().'_'.$f->getClientOriginalName());

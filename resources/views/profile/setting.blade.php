@@ -54,9 +54,9 @@
 
                                 <label for="nickname" class="col-form-label text-md-left">{{ __('Страна') }}</label>
 
-                                <input id="nickname"  type="text" class="form-control @error('nickname') is-invalid @enderror" name="nickname" value="{{ old('nickname')}}{{ Auth::user()->nickname }}">
+                                <input id="nickname"  type="text" class="form-control @error('country') is-invalid @enderror" name="country" value="{{ old('country')}}{{ Auth::user()->country }}">
 
-                                @error('nickname')
+                                @error('country')
                                 <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                     </span>
@@ -71,9 +71,9 @@
 
                                 <label for="nickname" class="col-form-label text-md-left">{{ __('Город') }}</label>
 
-                                <input id="nickname"  type="text" class="form-control @error('nickname') is-invalid @enderror" name="nickname" value="{{ old('nickname')}}{{ Auth::user()->nickname }}">
+                                <input id="nickname"  type="text" class="form-control @error('city') is-invalid @enderror" name="city" value="{{ old('city')}}{{ Auth::user()->city }}">
 
-                                @error('nickname')
+                                @error('city')
                                 <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                     </span>
@@ -88,9 +88,6 @@
                                 <label for="nickname" class="col-form-label text-md-left">{{ __('Ник') }}</label>
 
                                 <input id="nickname"  type="text" class="form-control @error('nickname') is-invalid @enderror" name="nickname" value="{{ old('nickname')}}{{ Auth::user()->nickname }}">
-
-
-
 
                                 @error('nickname')
                                 <span class="invalid-feedback" role="alert">
@@ -115,6 +112,25 @@
                             </div>
                         </div>
 
+                        <div class="offset-md-1 col-md-5">
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <label for="date" class="col-form-label text-md-left">{{ __('Пол:') }}</label>
+
+                                    <select class="form-control @error('gender') is-invalid @enderror" name="gender" value="{{ old('gender')}}{{ Auth::user()->gender }}" id="gender" >
+                                        <option>Мужской</option>
+                                        <option>Женский</option>
+                                        <option>Сёма</option>
+                                    </select>
+                                </div>
+                                @error('date')
+                                <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
                         <div class="col-md-5 offset-md-2 mt-3">
                             <div class="form-group">
                                 <button type="submit" class="btn-reg btn-primary btn btn-block" style="background: #5F9093; border-radius: 16px; !important;">
@@ -127,5 +143,4 @@
             </div>
         </div>
     </div>
-
 @endsection

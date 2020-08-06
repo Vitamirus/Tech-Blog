@@ -33,7 +33,11 @@ Route::post('/settings', 'UserConfigController@update')->name('settings');
 
 Route::get('/user/{nickname}', 'ProfileController@getProfile')->name('profile.user-profile');
 
+Route::post('/user/{nickname}', 'ProfileController@getProfile')->name('profile.user-profile');
+
 Route::post('/article', 'ArticleController@addArticle')->name('article');
+
+Route::post('/avatar', 'ProfileController@avatar')->name('avatar');
 
 //
 Route::post('/delete_article', 'ArticleController@deleteArticle')->name('delete_article');
@@ -44,3 +48,9 @@ Route::get('/chat-menu', 'ChatController@index')->name('chat-menu');
 
 Route::get('/chat', 'ChatController@index_item')->name('chat');
 
+Route::get('/search', 'SearchController@getResults')->name('results');
+
+Route::get('/friends', 'FriendController@getIndex')->name('friends');
+Route::get('/friends/add/{nickname}', 'FriendController@getAdd')->name('friends.add');
+Route::get('/friends/accept/{nickname}', 'FriendController@getAccept')->name('friends.accept');
+Route::post('/friends/delete/{nickname}', 'FriendController@postDelete')->name('friends.delete');
